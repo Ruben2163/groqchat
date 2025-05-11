@@ -1,4 +1,4 @@
-from groqchat import config
+from rgroq import config
 from groq import Groq
 from prompt_toolkit import print_formatted_text, HTML
 from pathlib import Path
@@ -18,9 +18,9 @@ config.thisPlatform = "macOS" if thisPlatform == "Darwin" else thisPlatform
 
 config.isTermux = True if os.path.isdir("/data/data/com.termux/files/home") else False
 
-userFolder = os.path.join(config.localStorage, "gchat")
+userFolder = os.path.join(config.localStorage, "rgroq")
 Path(userFolder).mkdir(parents=True, exist_ok=True)
-userFolder = os.path.join(config.localStorage, "gchat", "LLMs", "piper")
+userFolder = os.path.join(config.localStorage, "rgroq", "LLMs", "piper")
 Path(userFolder).mkdir(parents=True, exist_ok=True)
 
 def checkPyaudio():

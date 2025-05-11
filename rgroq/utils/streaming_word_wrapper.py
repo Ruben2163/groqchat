@@ -1,5 +1,5 @@
-from groqchat import config, getStringWidth, wrapText
-from groqchat.utils.tts_utils import TTSUtil
+from rgroq import config, getStringWidth, wrapText
+from rgroq.utils.tts_utils import TTSUtil
 #import pygments
 #from pygments.lexers.markup import MarkdownLexer
 #from prompt_toolkit.formatted_text import PygmentsTokens

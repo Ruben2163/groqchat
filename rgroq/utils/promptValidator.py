@@ -1,4 +1,4 @@
-from groqchat import config
+from rgroq import config
 from prompt_toolkit.validation import Validator, ValidationError
 
 class NumberValidator(Validator):

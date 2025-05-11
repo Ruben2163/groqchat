@@ -1,4 +1,4 @@
-from groqchat import config, downloadFile, installPipPackage, getHideOutputSuffix, print2
+from rgroq import config, downloadFile, installPipPackage, getHideOutputSuffix, print2
 import os, traceback, sounddevice, soundfile, pydoc, shutil
 
 
@@ -22,7 +22,7 @@ class TTSUtil:
                     pydoc.pipepager(content, cmd=cmd)
                 elif config.thisPlatform == "Windows":
 
-                    homeWsay = os.path.join(config.localStorage, "gchat", "wsay.exe")
+                    homeWsay = os.path.join(config.localStorage, "rgroq", "wsay.exe")
                     isWsayFound = (shutil.which("wsay") or os.path.isfile(homeWsay))
                     if not isWsayFound:
                         print2("Downloading 'wsay.exe' ...")
@@ -39,7 +39,7 @@ class TTSUtil:
                         if not install:
                             return None
                     audioFile = os.path.join(config.packageFolder, "temp", "piper.wav")
-                    model_dir = os.path.join(config.localStorage, "gchat", "LLMs", "piper")
+                    model_dir = os.path.join(config.localStorage, "rgroq", "LLMs", "piper")
                     model_path = f"""{os.path.join(model_dir, config.piper_voice)}.onnx"""
                     model_config_path = f"""{model_path}.json"""
                     piper_additional_options = f" {config.piper_additional_options.strip()}" if config.piper_additional_options.strip() else ""

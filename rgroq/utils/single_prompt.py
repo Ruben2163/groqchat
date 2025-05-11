@@ -1,6 +1,6 @@
 import textwrap
-from groqchat import config
-from groqchat import print2, print3, saveConfig, voiceTyping
+from rgroq import config
+from rgroq import print2, print3, saveConfig, voiceTyping
 
 from prompt_toolkit import prompt
 from prompt_toolkit.filters import Condition

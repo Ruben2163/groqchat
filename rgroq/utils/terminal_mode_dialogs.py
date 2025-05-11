@@ -1,4 +1,4 @@
-from groqchat import config
+from rgroq import config
 from prompt_toolkit import print_formatted_text, HTML
 from prompt_toolkit.styles import Style
 from prompt_toolkit.shortcuts import radiolist_dialog, checkboxlist_dialog

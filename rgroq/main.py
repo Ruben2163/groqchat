@@ -1,10 +1,10 @@
-from groqchat import config
-from groqchat import print1, print2, print3, getGroqClient, saveConfig, checkPyaudio
-from groqchat.utils.streaming_word_wrapper import StreamingWordWrapper
-from groqchat.utils.terminal_mode_dialogs import TerminalModeDialogs
-from groqchat.utils.single_prompt import SinglePrompt
-from groqchat.utils.promptValidator import FloatValidator, NumberValidator
-#from groqchat.utils.tool_plugins import Plugins
+from rgroq import config
+from rgroq import print1, print2, print3, getGroqClient, saveConfig, checkPyaudio
+from rgroq.utils.streaming_word_wrapper import StreamingWordWrapper
+from rgroq.utils.terminal_mode_dialogs import TerminalModeDialogs
+from rgroq.utils.single_prompt import SinglePrompt
+from rgroq.utils.promptValidator import FloatValidator, NumberValidator
+#from rgroq.utils.tool_plugins import Plugins
 
 from prompt_toolkit.completion import WordCompleter, FuzzyCompleter
 from prompt_toolkit.styles import Style
@@ -16,7 +16,7 @@ import threading, argparse, os, traceback
 from prompt_toolkit.key_binding import KeyBindings
 
 
-class GroqChatbot:
+class rgroqbot:
     """
     A simple Groq chatbot, without function calling.
     It is created for use with 3rd-party applications.
@@ -131,7 +131,7 @@ class GroqChatbot:
         #Plugins.runPlugins()
         #completer = FuzzyCompleter(WordCompleter(list(config.predefinedContexts.values()), ignore_case=True))
         # history
-        historyFolder = os.path.join(config.localStorage, "gchat")
+        historyFolder = os.path.join(config.localStorage, "rgroq")
         system_message_history = os.path.join(historyFolder, "system_message")
         system_message_session = PromptSession(history=FileHistory(system_message_history))
         # prompt
@@ -148,7 +148,7 @@ class GroqChatbot:
     def run(self, prompt=""):
         if self.defaultPrompt:
             prompt, self.defaultPrompt = self.defaultPrompt, ""
-        historyFolder = os.path.join(config.localStorage, "gchat")
+        historyFolder = os.path.join(config.localStorage, "rgroq")
         chat_history = os.path.join(historyFolder, "groq")
         chat_session = PromptSession(history=FileHistory(chat_history))
 
@@ -240,7 +240,7 @@ class GroqChatbot:
 
 def main():
     # Create the parser
-    parser = argparse.ArgumentParser(description="gchat cli options")
+    parser = argparse.ArgumentParser(description="rgroq cli options")
     # Add arguments
     parser.add_argument("default", nargs="?", default=None, help="default entry")
     parser.add_argument('-o', '--outputtokens', action='store', dest='outputtokens', help=f"specify maximum output tokens with -o flag; default: {config.groqApi_max_tokens}")
@@ -263,7 +263,7 @@ def main():
             temperature = config.llmTemperature
     else:
         temperature = config.llmTemperature
-    GroqChatbot(
+    rgroqbot(
         temperature=temperature,
         max_output_tokens = max_output_tokens,
     ).run(
