@@ -1,20 +1,14 @@
 # groqchat
 
-A terminal chatbot, powered by Groq Cloud API (Windows / macOS / Linux / Android / iOS)
+A terminal chatbot, powered by Groq Cloud API (Windows / MacOS / Linux)
 
-Modified groq chatbot developed in https://github.com/eliranwong/freegenius
-
-A simple chatbot that runs fast on mobile phones as well as pc.
+A simple chatbot that runs fast on Mac Linux and Windows.
 
 # Groq API Key
 
-Get a Groq API key first. Read https://github.com/eliranwong/freegenius/wiki/Set-up-a-Groq-Cloud-API-Key
+## Get a Groq API key first:
+from www.groq.com
 
-# Android / iOS / iPhone / iPad Users
-
-iOS/iPad/iPhone: Use [iSH](https://ish.app/) on iOS/iPad/iPhone.
-
-Android: Use [Termux](https://termux.dev/en/) on Android.
 
 # Installation
 
@@ -26,23 +20,7 @@ Or
 
 > pip install gchat
 
-# Android Users
 
-1. Install rust
-
-> pkg install rust
-
-2. Use "--system-site-packages" if you create a virtual environment, e.g.
-
-> python -m venv gchat --system-site-packages
-
-> source gchat/bin/activate
-
-> pip install --upgrade gchat
-
-On Android, use Android built-in voice typing keyboards of Ctrl+S.
-
-Install [Termux:API](https://wiki.termux.com/wiki/Termux:API), to work with response output on Andoird.
 
 # Get Started
 
