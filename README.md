@@ -42,7 +42,7 @@ Or
 
 On Android, use Android built-in voice typing keyboards of Ctrl+S.
 
-Install [Termux:API](https://wiki.termux.com/wiki/Termux:API), to work with response output on Andoird.
+Install [Termux:API](https://wiki.termux.com/wiki/Termux:API), to work with response output on Android.
 
 # Get Started
 
