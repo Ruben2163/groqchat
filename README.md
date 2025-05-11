@@ -14,10 +14,6 @@ from www.groq.com
 
 With python installed, setup gropchat via pip:
 
-> pip install groqchat
-
-Or
-
 > pip install gchat
 
 
