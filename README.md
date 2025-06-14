@@ -14,13 +14,13 @@ from www.groq.com
 
 With python installed, setup gropchat via pip:
 
-> pip install gchat
+> pip install rgroq
 
 
 
 # Get Started
 
-Simply run 'gchat':
+Simply run 'rgroq':
 
 > gchat
 
