@@ -6,7 +6,6 @@ A simple chatbot that runs fast on Mac Linux and Windows.
 
 # Groq API Key
 
-## Get a Groq API key first:
 from www.groq.com
 
 
