@@ -8,7 +8,6 @@ A simple chatbot that runs fast on Mac Linux and Windows.
 
 from www.groq.com
 
-
 # Installation
 
 With python installed, setup gropchat via pip:
