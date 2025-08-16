@@ -5,7 +5,6 @@ A terminal chatbot, powered by Groq Cloud API (Windows / MacOS / Linux)
 A simple chatbot that runs fast on Mac Linux and Windows.
 
 # Groq API Key
-
 from www.groq.com
 
 # Installation
