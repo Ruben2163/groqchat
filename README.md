@@ -13,8 +13,6 @@ With python installed, setup gropchat via pip:
 
 > pip install rgroq
 
-
-
 # Get Started
 
 Simply run 'rgroq':
